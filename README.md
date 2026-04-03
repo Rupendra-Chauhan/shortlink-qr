@@ -20,8 +20,8 @@ npm install shortlink-qr
 
 ## Quick start (standalone)
 
-1. Set environment variables (see [Configuration](#configuration)).
-2. From your project (or this repo after `npm install`):
+1. **Required:** set `JWT_SECRET` (see [Configuration](#configuration)). Easiest: in your project root, add a `.env` file (copy fields from `.env.example` in this package). The bundled example runs `dotenv` against **your** project directory when you start it.
+2. From your project (after `npm install shortlink-qr`):
 
 ```bash
 node node_modules/shortlink-qr/examples/standalone-server.js

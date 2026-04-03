@@ -1,6 +1,6 @@
 {
   "name": "shortlink-qr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drop-in Express URL shortener with QR codes, OTP/JWT auth, OpenAPI/Swagger UI, rate limits, and MongoDB.",
   "main": "src/index.js",
   "exports": {
@@ -54,9 +54,7 @@
     "mongoose": "^8.7.0",
     "morgan": "^1.10.0",
     "qrcode": "^1.5.4",
-    "swagger-ui-express": "^5.0.1"
-  },
-  "devDependencies": {
+    "swagger-ui-express": "^5.0.1",
     "dotenv": "^16.4.5"
   }
 }

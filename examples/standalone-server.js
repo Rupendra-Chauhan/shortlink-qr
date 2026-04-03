@@ -1,14 +1,16 @@
 /**
  * Example: run the shortener as its own HTTP server.
  *
- * From this repo (after `npm install`):
- *   Set JWT_SECRET (and optionally MONGODB_URI); see `.env.example`.
- *   PowerShell: $env:JWT_SECRET="devsecret"; node examples/standalone-server.js
- *   bash:       export JWT_SECRET=devsecret && node examples/standalone-server.js
+ * Loads `.env` from the **current working directory** (your project root), not from
+ * inside `node_modules`. Copy variables from `shortlink-qr`’s `.env.example` into your `.env`.
  *
- * From another project (after `npm install shortlink-qr`):
- *   node node_modules/shortlink-qr/examples/standalone-server.js
+ * From this repo: `npm start` or `node examples/standalone-server.js`
+ * From another project: `node node_modules/shortlink-qr/examples/standalone-server.js`
+ *
+ * You can still use shell env instead of `.env` (e.g. `$env:JWT_SECRET="..."` in PowerShell).
  */
+
+require('dotenv').config();
 
 const { start, close } = require('..');
 
