@@ -1,0 +1,62 @@
+{
+  "name": "shortlink-qr",
+  "version": "1.0.0",
+  "description": "Drop-in Express URL shortener with QR codes, OTP/JWT auth, OpenAPI/Swagger UI, rate limits, and MongoDB.",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "examples",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node examples/standalone-server.js",
+    "prepublishOnly": "node -e \"require('./src/index.js'); console.log('entry ok')\""
+  },
+  "keywords": [
+    "url-shortener",
+    "shortlink",
+    "express",
+    "mongodb",
+    "mongoose",
+    "qr",
+    "qrcode",
+    "swagger",
+    "openapi",
+    "otp",
+    "jwt",
+    "rest-api"
+  ],
+  "author": "Rupendra Chauhan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rupendra-Chauhan/shortlink-qr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Rupendra-Chauhan/shortlink-qr/issues"
+  },
+  "homepage": "https://github.com/Rupendra-Chauhan/shortlink-qr#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "js-yaml": "^4.1.0",
+    "mongoose": "^8.7.0",
+    "morgan": "^1.10.0",
+    "qrcode": "^1.5.4",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
